@@ -1,1 +1,19 @@
-/* You can add global styles to this file, and also import other style files */
+*, *:after, *:before {
+    box-sizing: border-box;
+}
+
+*:not(.material-icons) {
+    font-family: "Muli", "Helvetica Neue", sans-serif !important;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+body {
+    background: #f5f5f5;
+    color: #444;
+    font-family: "Muli", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}

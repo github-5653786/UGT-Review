@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "UsingDigitCSS"
+    }
+  },
+  "defaultProject": "UsingDigitCSS",
+  "cli": {
+    "analytics": false
+  }
 }

@@ -1,0 +1,211 @@
+.bgImg {
+    background-image: url('https://img.freepik.com/free-vector/business-team-brainstorming-meeting-group-businesspeople-sitting-together-office-discussing-n_48369-12518.jpg?size=626&ext=jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 625px;
+    width: 100%;
+}
+
+.contentImg {
+    font-size: x-large;
+}
+
+.contentImg h1 {
+    font-size: 60px;
+    text-shadow: 2px 2px 5px red;
+    padding-top: 200px;
+}
+
+.gif {
+    position: absolute;
+    top: -400px;
+    left: 70px;
+}
+
+.card-text {
+    color: #ccc;
+}
+
+.card:hover p {
+    color: #263238;
+}
+
+.card {
+    padding: 30px;
+    border-radius: 4%;
+    width: 90%;
+    height: 415px;
+    animation-name: Blur;
+    animation-duration: 4s;
+}
+
+@keyframes Blur {
+    0% {
+        filter: blur(3px);
+    }
+    35% {
+        filter: blur(0px);
+    }
+}
+
+.card-img-top {
+    height: 255px;
+    border-radius: 50%;
+}
+
+.contentImg p {
+    text-shadow: 2px 2px 5px blue;
+    text-decoration: underline;
+}
+
+.margin-t {
+    margin-top: 15%;
+}
+
+.aboutuscontent {
+    padding-top: 70px;
+    background-color: #f5f5f5;
+}
+
+.col_white_amrc {
+    color: #FFF;
+}
+
+footer {
+    width: 100%;
+    background-color: #263238;
+    height: 160px;
+    padding: 10px 0px 25px 0px;
+}
+
+footer p {
+    font-size: 13px;
+    color: #CCC;
+    padding-bottom: 0px;
+    margin-bottom: 8px;
+}
+
+.bottom_border {
+    border-bottom: 1px solid #323f45;
+    padding-bottom: 20px;
+}
+
+.foote_bottom_ul_amrc {
+    list-style-type: none;
+    padding: 0px;
+    display: table;
+    margin-top: 10px;
+    margin-right: auto;
+    margin-bottom: 10px;
+    margin-left: auto;
+}
+
+.foote_bottom_ul_amrc li {
+    display: inline;
+}
+
+.foote_bottom_ul_amrc li a {
+    color: #999;
+    margin: 0 12px;
+    cursor: pointer;
+}
+
+.foote_bottom_ul_amrc li a:hover {
+    color: #fff;
+    text-decoration: none;
+}
+
+@media only screen and (max-width:1200px) {
+    .foote_bottom_ul_amrc {
+        display: none;
+    }
+}
+
+@media(min-width:992px) {
+    .card {
+        width: 100%;
+        margin-bottom: 25px;
+    }
+    .bgImg {
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+}
+
+@media(min-width:768px) and (max-width:991px) {
+    .bgImg {
+        background-size: contain;
+        height: 430px
+    }
+    .contentImg h1 {
+        font-size: 30px;
+    }
+    .card {
+        width: 100%;
+        height: 460px;
+        margin-bottom: 25px;
+    }
+}
+
+@media(min-width:575px) and (max-width:767px) {
+    .contentImg h1 {
+        font-size: 30px;
+    }
+    .bgImg {
+        background-size: contain;
+        height: 360px;
+    }
+    .contentImg p {
+        font-size: 18px;
+    }
+    .card {
+        width: 100%;
+        height: 460px;
+        margin-bottom: 25px;
+    }
+}
+
+@media(min-width:480px) and (max-width:574px) {
+    .contentImg h1 {
+        font-size: 30px;
+    }
+    .bgImg {
+        background-size: initial;
+        height: 360px;
+    }
+    .contentImg p {
+        font-size: 18px;
+    }
+    .card {
+        margin-left: 53px;
+        width: 74%;
+        margin-bottom: 25px;
+        height: auto;
+    }
+}
+
+@media(max-width:479px) {
+    .contentImg h1 {
+        font-size: 25px;
+    }
+    .footer {
+        height: 100px;
+    }
+    .bgImg {
+        background-size: initial;
+        height: 350px;
+    }
+    .contentImg p {
+        font-size: 15px;
+    }
+    .gif {
+        top: -145px;
+    }
+    .card {
+        margin-left: 10px;
+        width: 94%;
+        margin-bottom: 25px;
+        height: auto;
+    }
+}

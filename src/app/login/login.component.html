@@ -1,0 +1,45 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-xl-3 forms" *ngIf="showNumModal">
+            <form #formname="ngForm" (ngSubmit)="formname.valid && SendOTP(formname.value)">
+                <div class="form-group">
+                    <p class="font-weight-bold">You will get an OTP on this number to verify your identity</p>
+                    <label for="number">Enter Mobile Number</label>
+                    <input autocomplete="off" type="text" class="form-control" required id="number" [(ngModel)]=number
+                        #number1="ngModel" name="number" maxlength="10">
+                    <div *ngIf="number1.touched || number1.errors?.required && formname.submitted">
+                        <div *ngIf="number1.errors?.required" class="danger">
+                            Number is Required.
+                        </div>
+                        <div *ngIf="maxLen" class="danger">
+                            Enter a valid Number.
+                        </div>
+                    </div>
+                </div>
+                <button type="submit" [disabled]="!formname.valid" class="btn btn-primary">Get OTP</button>
+            </form>
+        </div>
+
+        <div class="col-xl-3 forms" *ngIf="showValModal">
+            <form #formname="ngForm" (ngSubmit)="formname.valid && validateOTP(formname.value)">
+                <div class="form-group">
+                    <p class="font-weight-bold">We Sent an OTP on <span class="phNum"
+                            (click)="showNumModal = true;showValModal=false">{{number}}</span> Number, Don't
+                        disclose it to anyone.</p>
+                    <label for="otp">Enter OTP</label>
+                    <input autocomplete="off" type="text" class="form-control" required id="otp" [(ngModel)]=otp
+                        #otpNum="ngModel" name="otp" maxlength="6">
+                    <div *ngIf="otpNum.touched || otpNum.errors?.required && formname.submitted">
+                        <div *ngIf="otpNum.errors?.required" class="danger">
+                            OTP is Required.
+                        </div>
+                        <div *ngIf="validateOtp" class="danger">
+                            Enter Valid OTP!
+                        </div>
+                    </div>
+                </div>
+                <button type="submit" [disabled]="!formname.valid" class="btn btn-primary">Continue</button>
+            </form>
+        </div>
+    </div>
+</div>
